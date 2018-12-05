@@ -86,7 +86,7 @@ while not PROGRAM_END:
             main_screen.fill(BACKGROUND_COLOR)
             activation = 'sigmoid'
 
-    quest1(activation)
+    #quest1(activation)
     #quest2(activation)
     #quest3(activation)
     #quest4(activation)
