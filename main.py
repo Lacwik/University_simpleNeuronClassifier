@@ -10,6 +10,7 @@ nn4 = Network4(bias=1)
 
 tmp = 0
 activation = 'sigmoid'  # linear, unipolar, sigmoid
+quest = 1
 
 
 def color_point(point, function, tmp):
@@ -85,11 +86,27 @@ while not PROGRAM_END:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_e:
             main_screen.fill(BACKGROUND_COLOR)
             activation = 'sigmoid'
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_1:
+            main_screen.fill(BACKGROUND_COLOR)
+            quest = 1
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_2:
+            main_screen.fill(BACKGROUND_COLOR)
+            quest = 2
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_3:
+            main_screen.fill(BACKGROUND_COLOR)
+            quest = 3
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_4:
+            main_screen.fill(BACKGROUND_COLOR)
+            quest = 4
 
-    #quest1(activation)
-    #quest2(activation)
-    #quest3(activation)
-    #quest4(activation)
+    if quest == 1:
+        quest1(activation)
+    if quest == 2:
+        quest2(activation)
+    if quest == 3:
+        quest3(activation)
+    if quest == 4:
+        quest4(activation)
     for point in points:
         point.draw()
     function_text(activation)
