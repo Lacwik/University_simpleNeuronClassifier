@@ -3,7 +3,7 @@
 
 Program done for vizualization simple neuron or neurons combinations working, showing standard calssifications problem. <br />
 All weights are random. <br />
-All tasks are in [this](./projekt1_sieci_wt_sr.pdf) pdf (Polish language only :/ )
+All tasks are in this [presentation](./projekt1_sieci_wt_sr.pdf) (Polish language only :/ )
 
 ===== CONTROLS ===== <br />
 q   -> linear activation function <br />
