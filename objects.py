@@ -21,3 +21,8 @@ def init_points():
             point = Point(i, j, BLACK)
             points.append(point)
     return points
+
+def function_text(string):
+   font = pygame.font.Font(None,30)
+   text = font.render(string, 1, BLACK)
+   main_screen.blit(text, (80, 230))

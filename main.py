@@ -9,6 +9,7 @@ nn3 = Network3()
 nn4 = Network4(bias=1)
 
 tmp = 0
+activation = 'sigmoid'  # linear, unipolar, sigmoid
 
 
 def color_point(point, function, tmp):
@@ -65,7 +66,7 @@ def quest4(function='sigmoid'):
 while not PROGRAM_END:
     # --- Main event loop
     for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN and event.key == K_SPACE:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             if(PAUSED):
                 print("-----START-----")
             else:
@@ -73,8 +74,17 @@ while not PROGRAM_END:
             PAUSED = not PAUSED
         if event.type == pygame.QUIT:
             PROGRAM_END = True
-        if event.type == pygame.KEYDOWN and event.key == K_ESC:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             PROGRAM_END = True
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_q:
+            main_screen.fill(BACKGROUND_COLOR)
+            activation = 'linear'
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_w:
+            main_screen.fill(BACKGROUND_COLOR)
+            activation = 'unipolar'
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_e:
+            main_screen.fill(BACKGROUND_COLOR)
+            activation = 'sigmoid'
 
     quest1(activation)
     #quest2(activation)
@@ -82,6 +92,7 @@ while not PROGRAM_END:
     #quest4(activation)
     for point in points:
         point.draw()
+    function_text(activation)
 
     pygame.display.flip()
     clock.tick(framerate)

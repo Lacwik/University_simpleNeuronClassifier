@@ -15,13 +15,10 @@ PAUSED = False
 
 # PYGAME DRAWING VALUES
 screen_width = 240
-screen_height = 240
+screen_height = 280
 framerate = 60
 point_radius = 20
 points_number = 10
-
-# PROGRAM OPTIONS
-activation = 'sigmoid'  # linear, unipolar, sigmoid
 
 
 main_screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE)
