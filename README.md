@@ -1,4 +1,4 @@
-# University_python
+# Simple neuron classifier
 © Maciej Łacwik 2018 <br />
 
 Program done for vizualization simple neuron or neurons combinations working, showing standard calssifications problem. <br />
